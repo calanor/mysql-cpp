@@ -7,6 +7,10 @@
 #include <map>
 #include <mysql/mysql.h>
 
+#if MYSQL_VERSION_ID > 80000
+    #define my_bool bool
+#endif
+
 class mysql;
 class Stmt;
 class Result;
